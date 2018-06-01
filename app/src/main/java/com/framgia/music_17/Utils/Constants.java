@@ -17,7 +17,7 @@ public class Constants {
     public static final String SEARCH_MUSIC = TRACKS_URL + "&q=";
 
     public static class TabLayout {
-        public static final int TAB_HOME = 0;
+        public static final int TAB_PLAY_LIST_ONLINE = 0;
         public static final int TAB_PLAY_LIST = 1;
         public static final int TAB_MUSIC = 2;
     }

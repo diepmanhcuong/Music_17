@@ -7,12 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.framgia.music_17.R;
 import com.framgia.music_17.screen.listmusicoffline.ListMusicOfflineFragment;
+import com.framgia.music_17.screen.listmusiconline.ListMusicOnlineFragment;
 import com.framgia.music_17.screen.playlistoffline.PlaylistOfflineFragment;
-import com.framgia.music_17.screen.playmusic.PlayMusicFragment;
-
-import static com.framgia.music_17.Utils.Constants.TabLayout.TAB_HOME;
 import static com.framgia.music_17.Utils.Constants.TabLayout.TAB_MUSIC;
 import static com.framgia.music_17.Utils.Constants.TabLayout.TAB_PLAY_LIST;
+import static com.framgia.music_17.Utils.Constants.TabLayout.TAB_PLAY_LIST_ONLINE;
 
 public class MainAdapter extends FragmentPagerAdapter {
 
@@ -28,8 +27,8 @@ public class MainAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
-            case TAB_HOME:
-                return new PlayMusicFragment();
+            case TAB_PLAY_LIST_ONLINE:
+                return new ListMusicOnlineFragment();
             case TAB_PLAY_LIST:
                 return new PlaylistOfflineFragment();
             case TAB_MUSIC:
@@ -48,7 +47,7 @@ public class MainAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
-            case TAB_HOME:
+            case TAB_PLAY_LIST_ONLINE:
                 return mContext.getString(R.string.play_list_online);
             case TAB_PLAY_LIST:
                 return mContext.getString(R.string.play_list_offline);
