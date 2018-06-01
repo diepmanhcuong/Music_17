@@ -1,7 +1,7 @@
 package com.framgia.music_17.Utils;
 
+import android.content.res.Resources;
 import com.framgia.music_17.BuildConfig;
-import com.framgia.music_17.R;
 
 public class Constants {
     public Constants() {
@@ -15,4 +15,10 @@ public class Constants {
     public static final String TRACKS_URL = URL + TRACKS + CLIENT_ID + API_KEY;
     public static final String TRACK_GENRES = TRACKS_URL + "&genres=";
     public static final String SEARCH_MUSIC = TRACKS_URL + "&q=";
+
+    public static class TabLayout {
+        public static final int TAB_HOME = 0;
+        public static final int TAB_PLAY_LIST = 1;
+        public static final int TAB_MUSIC = 2;
+    }
 }
